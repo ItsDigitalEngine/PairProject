@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Hacktiv8 Hackathon",
+        "location": "ICE BSD",
+        "date": "2021-03-01"
+    },
+    {
+        "name": "Hacktiv8 Idol",
+        "location": "Balai Sarbini",
+        "date": "2021-02-27"
+    },
+    {
+        "name": "Hacktiv8 Warehouse Project",
+        "location": "JIExpo Kemayoran",
+        "date": "2021-12-18"
+    },
+    {
+        "name": "Hacktiv8-Con",
+        "location": "JCC Senayan",
+        "date": "2021-07-25"
+    }
+]

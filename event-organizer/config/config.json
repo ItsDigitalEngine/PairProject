@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "viawibowo",
+    "password": "postgres",
+    "database": "eo-mgt",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

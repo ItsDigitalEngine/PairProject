@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Via Wibowo",
+        "gender": "female",
+        "email": "novialita.a@gmail.com",
+        "password": "istanbul123"
+    },
+    {
+        "name": "Misal Wijaya",
+        "gender": "male",
+        "email": "missaylwen@yahoo.com",
+        "password": "glassgow111"
+    }
+]
