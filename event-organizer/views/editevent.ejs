@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <h2>Update Event</h2>
+        <form action="/event/edit/<%= event.id %>" method="POST">      
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="<%= event.name %> "><br>
+            <label for="location">Location:</label><br>
+            <input type="text" id="location" name="location" value="<%= event.location %> "><br>
+            <label for="date">Date:</label><br>
+            <input type="text" id="date" name="date" value="<%= event.date %> "><br>
+            <input type="submit" value="Update">
+        </form> 
+    </body>
+</html>

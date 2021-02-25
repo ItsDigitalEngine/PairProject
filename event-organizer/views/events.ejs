@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <ul>
+              <%- include('./partials/header.ejs') %>
+              <h2>Our Events</h2>
+              <a href="/event/add">Add Event</a>
+          </ul>
+        <table>
+            <!-- header -->
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            
+            <!-- data -->
+            <% for (let i = 0; i < events.length; i++) { %>
+                <tr>
+                    <td> <%= events[i].name %>  </td>
+                    <td> <%= events[i].location %>  </td>
+                    <td> <%= events[i].date %> </td>
+                    <td><a href="/event/edit/<%= event[i].id%>">Edit</a> | <a onclick="return confirm('Are you sure?')" href="/event/delete/<%= event[i].id%>">Delete</a>
+                </tr>
+            <% } %> 
+            </table>
+    </body>
+</html>

@@ -1,29 +1,22 @@
 const {Staff, Event, EventStaff} = require('../models')
 
 class EventStaffController {
-    static findAll(req, res) {
-        EventStaff.findAll()
-        .then (eventStaffs => {
-            res.render('eventStaff', {eventStaffs : eventStaffs})
-        })
-        .catch (err => {
-            res.send(err)
-        })
-    }
     static getAdd(req, res) {
-        res.render('addEventStaff')
+        res.render('assigneventstaff')
     }
     static postAdd(req, res) {
-        EventStaff.create()
-    }
-    static getEdit(req, res) {
+        EventStaff.create({
+            EventName: req.body.event,
+            StaffName: req.body.staff,
+            role: req.body.role
+        })
+        .then(eventstaff => {
+            res.redirect('/eventstaff')
+        })
+        .catch(err => {
+            res.send(err)
+        })
 
-    }
-    static postEdit(req, res) {
-
-    }
-    static getDelete(req, res) {
-        
     }
 }
 

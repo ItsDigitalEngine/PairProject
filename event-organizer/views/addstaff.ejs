@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <h2>Add Staff</h2>
+        <form action="/staff/add" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password"><br>
+            <label for="genre">Gender:</label><br>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div><br><br>
+            <input type="submit" value="Save">
+        </form> 
+    </body>
+</html>

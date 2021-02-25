@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <ul>
+              <%- include('./partials/header.ejs') %>
+              <h2>Our Team</h2>
+              <a href="/staff/add">Add Staff</a>
+          </ul>
+        <table>
+            <!-- header -->
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            
+            <!-- data -->
+            <% for (let i = 0; i < staffs.length; i++) { %>
+                <tr>
+                    <td> <%= staffs[i].name %>  </td>
+                    <td> <%= staffs[i].gender %>  </td>
+                    <td> <%= staffs[i].email %> </td>
+                    <td><a href="/staff/edit/<%= staff[i].id%>">Edit</a> | <a onclick="return confirm('Are you sure?')" href="/staff/delete/<%= staff[i].id%>">Delete</a>
+                </tr>
+            <% } %> 
+            </table>
+    </body>
+</html>
