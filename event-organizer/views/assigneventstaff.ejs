@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <h2>Event Team</h2>
+        <form action="/eventstaff/assign" method="POST">
+            <label for="staff">Staff:</label><br>
+            <% staffs.forEach((el, i) => { %> 
+            <select id="staff" name="staff">
+                <option value="">-- Select Staff --</option>
+                <option value="<% el[i].id %>"><%= el.name %></option>
+            </select><br><br>
+            <% }) %>
+            <label for="event">Events:</label><br>
+            <% events.forEach((el, i) => { %> 
+            <select id="event" name="event">
+                <option value="">-- Select Event --</option>
+                <option value="<% el[i].id %>"><%= el.name %></option>
+            </select><br><br>
+            <% }) %>
+            <label for="role">Role:</label><br>
+            <input type="text" id="role" name="role"><br><br>
+            <input type="submit" value="Assign">
+        </form> 
+    </body>
+</html>
